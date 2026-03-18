@@ -36,11 +36,74 @@ section {
     margin-top: 10px;
 }
 
-<form action="https://formsubmit.co/hsyin-atalay@hotmail.com" method="POST">
+<!-- Başlangıç: Modern Form + Teşekkür Mesajı -->
+<style>
+  .contact-form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+  .contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  .thank-you-message {
+    display: none;
+    text-align: center;
+    color: green;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+</style>
+
+<form class="contact-form" id="myForm" action="https://formsubmit.co/hsyin-atalay@hotmail.com" method="POST" onsubmit="showThankYouMessage()">
+  <h2>Özel Ders Başvuru Formu</h2>
   <input type="text" name="name" placeholder="Adınız" required>
   <input type="email" name="email" placeholder="E-posta adresiniz" required>
-  <textarea name="message" placeholder="Mesajınız" required></textarea>
+  <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
   <button type="submit">Gönder</button>
+  <div class="thank-you-message" id="thankYouMessage">Teşekkürler, mesajınız gönderildi!</div>
+</form>
+
+<script>
+function showThankYouMessage() {
+  setTimeout(function() {
+    document.getElementById('thankYouMessage').style.display = 'block';
+    document.getElementById('myForm').reset();
+  }, 100);
+}
+</script>
+<!-- Bitiş: Modern Form + Teşekkür Mesajı -->
 </form> input, form textarea {
     width: 100%;
     padding: 10px;
