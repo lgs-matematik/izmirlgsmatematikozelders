@@ -36,7 +36,7 @@ section {
     margin-top: 10px;
 }
 
-<!-- Başlangıç: Modern Form + Teşekkür Mesajı -->
+<!-- Başlangıç: Modern Form -->
 <style>
   .contact-form {
     max-width: 500px;
@@ -46,7 +46,6 @@ section {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     font-family: Arial, sans-serif;
-    position: relative;
   }
   .contact-form h2 {
     text-align: center;
@@ -77,33 +76,16 @@ section {
   .contact-form button:hover {
     background-color: #0056b3;
   }
-  .thank-you-message {
-    display: none;
-    text-align: center;
-    color: green;
-    font-size: 18px;
-    margin-top: 15px;
-  }
 </style>
 
-<form class="contact-form" id="myForm" action="https://formsubmit.co/hsyin-atalay@hotmail.com" method="POST" onsubmit="showThankYouMessage()">
+<form class="contact-form" action="https://formsubmit.co/hsyin-atalay@hotmail.com" method="POST">
   <h2>Özel Ders Başvuru Formu</h2>
   <input type="text" name="name" placeholder="Adınız" required>
   <input type="email" name="email" placeholder="E-posta adresiniz" required>
   <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
   <button type="submit">Gönder</button>
-  <div class="thank-you-message" id="thankYouMessage">Teşekkürler, mesajınız gönderildi!</div>
 </form>
-
-<script>
-function showThankYouMessage() {
-  setTimeout(function() {
-    document.getElementById('thankYouMessage').style.display = 'block';
-    document.getElementById('myForm').reset();
-  }, 100);
-}
-</script>
-<!-- Bitiş: Modern Form + Teşekkür Mesajı -->
+<!-- Bitiş: Modern Form -->
 </form> input, form textarea {
     width: 100%;
     padding: 10px;
