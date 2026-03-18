@@ -172,11 +172,15 @@
       <input type="email" name="email" placeholder="E-posta adresiniz" required>
       <input type="text" name="subject" placeholder="İlgilendiğiniz Ders/Dersler" required>
       <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
+
+      <!-- Formsubmit ayarları -->
+      <input type="hidden" name="_subject" value="Yeni Özel Ders Başvuru Mesajı">
+      <input type="hidden" name="_template" value="table">
+
       <button type="submit">Gönder</button>
       <div class="thank-you-message" id="thankYouMessage">Teşekkürler, mesajınız gönderildi!</div>
     </form>
   </section>
-
 </main>
 
 <footer>
