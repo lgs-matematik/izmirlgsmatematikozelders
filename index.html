@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>İzmir Özel Dersler - Matematik, Fen, İngilizce ve Daha Fazlası</title>
-  <meta name="description" content="İzmir’de tüm dersler için birebir özel ders hizmeti. Matematik, Fen Bilimleri, Türkçe, İngilizce ve diğer derslerde uzman öğretmenler ile başarıyı yakalayın.">
+  <title>İzmir Özel Dersler - Tüm Dersler</title>
+  <meta name="description" content="İzmir’de tüm dersler için birebir özel ders hizmeti. Matematik, Fen, Türkçe, İngilizce ve diğer derslerde uzman öğretmenler ile başarıyı yakalayın.">
   <meta name="keywords" content="Özel Ders, Matematik, Fen Bilimleri, Türkçe, İngilizce, İzmir, Sınav Hazırlık, Birebir Ders">
   <style>
     body {
@@ -53,6 +53,34 @@
       padding: 10px 15px;
       border-radius: 8px;
     }
+    /* Hakkımda kutucuğu */
+    .about-card {
+      background: #e7f1ff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .about-card h3 {
+      margin-top: 0;
+      color: #007bff;
+    }
+    /* WhatsApp Butonu */
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    .whatsapp-button:hover {
+      background-color: #1ebe57;
+    }
+    /* Form tasarımı */
     .contact-form {
       max-width: 500px;
       margin: 20px auto;
@@ -65,7 +93,7 @@
     .contact-form h2 {
       text-align: center;
       margin-bottom: 20px;
-      color: #333;
+      color: #007bff;
     }
     .contact-form input,
     .contact-form textarea {
@@ -114,9 +142,16 @@
 </header>
 
 <main>
+  <!-- Hakkımda Kutucuğu -->
+  <section class="about-card">
+    <h3>Hakkımda</h3>
+    <p>Merhaba! Ben Atalay, İzmir’de öğrencilerin akademik başarılarını artırmak için birebir özel dersler veriyorum. Matematik, Fen, Türkçe, İngilizce ve diğer derslerde deneyimli bir öğretmenim. Amacım öğrencilerin seviyesine uygun, eğlenceli ve etkili dersler sunmak.</p>
+    <a href="https://wa.me/905078430343" target="_blank" class="whatsapp-button">💬 WhatsApp’tan Hemen Mesaj Gönder</a>
+  </section>
+
+  <!-- Dersler -->
   <section>
     <h2>Derslerimiz</h2>
-    <p>Tüm seviyelerde ve tüm derslerde uzman öğretmenlerle birebir özel ders imkanı:</p>
     <ul class="lessons-list">
       <li>Matematik</li>
       <li>Fen Bilimleri</li>
@@ -129,10 +164,10 @@
     </ul>
   </section>
 
+  <!-- Başvuru Formu -->
   <section>
-    <h2>Başvuru Formu</h2>
+    <h2>📚 Özel Ders Başvuru Formu</h2>
     <form class="contact-form" id="myForm" action="https://formsubmit.co/hsyin-atalay@hotmail.com" method="POST" onsubmit="showThankYouMessage()">
-      <h2>Özel Ders Başvuru Formu</h2>
       <input type="text" name="name" placeholder="Adınız" required>
       <input type="email" name="email" placeholder="E-posta adresiniz" required>
       <input type="text" name="subject" placeholder="İlgilendiğiniz Ders/Dersler" required>
@@ -142,11 +177,6 @@
     </form>
   </section>
 
-  <section>
-    <h2>İletişim</h2>
-    <p>Telefon: 507 843 0343</p>
-    <p>E-posta: hsyin-atalay@hotmail.com</p>
-  </section>
 </main>
 
 <footer>
